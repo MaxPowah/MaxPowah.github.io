@@ -1,0 +1,92 @@
+<script src="https://koda.nu/simple.js">
+  var x = 178;
+  var y = 100;
+updatesPerSecond = 60;
+var screenEndX = 920;
+  var speedX = 3;
+  var speedY = 2.5;
+var diameter = 50;
+// Returns a random whole number from 1-10:
+var rnd = random(256);
+var rndG = random(256);
+var rndÖ = random(256);
+  
+function update()
+{
+    clearScreen();
+
+  //BG
+                          //SOLEN
+                circle(100, 200, 200, "yellow");
+          //programmeringsdelen
+
+
+
+
+
+
+
+
+            circle(650, 100, 20, "red");
+            circle(0, 300, 50, "green");
+            //tree
+              rectangle(0,340, 20, 200, "brown");
+              circle(0, 300, 50, "green");
+
+            circle(400, 110, 20, "black");
+              //person
+            rectangle(400, 130, 10, 40, "black");
+            rectangle(410, 170, 10, 40, "black");
+            rectangle(390, 170, 10, 40, "black");
+
+            rectangle(200, 300, 500, 200, "grey");
+              //triangle(X1, Y1, X2, Y2, X3, Y3, FÄRG)
+            triangle(190, 300, 400, 200, 710, 300, "red");
+
+            rectangle(0, 500, 1000, 200, "green");
+
+
+
+  //bg end -----------------------------------------------------------------------------
+
+  circle(x,y,50, mixColor(rnd, rndG, rnd));
+		//text within circle
+//Ritar ut textsträngen TEXTSTRÄNG på koordinaten (X, Y) med den givna färgen och storleken.
+  
+  			text(0, 0, "DVD", mixColor(256, 256, 256));
+  picture(x, y, "C:\Users\maxca\OneDrive\Bilder\Skärmbilder\Skärmbild(13).png");
+  			
+  			
+  x = x+speedX;
+  y=y+speedY;
+  
+  if(x > totalWidth - diameter)
+  {
+  	speedX = -1 * (random(speedX ) + 4);
+
+  }
+  
+ if(x < 0 + diameter)
+  {
+  	speedX = -1 * (random(speedX) - 4);
+
+  }
+  
+if(y > totalHeight - diameter)
+  {
+  	speedY = -1 * (random(speedY) + 4);
+
+  }
+  
+ if(y < 0 + diameter)
+  {
+  	speedY = -1 * (random(speedY) - 4);
+  }
+  
+  
+    
+
+}
+
+
+</script>
