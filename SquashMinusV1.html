@@ -29,22 +29,21 @@
     {
           clearScreen();
 
-       text((totalWidth/2 - 180), 30, 20, "Score     |", "black");
+       text((totalWidth/2 - 180), 30, 20, "Score:     );
       //p1score
       	text((totalWidth/2 - 90), 30, 20, score1, "black");
-      //p2score
-          text((totalWidth/2), 30, 20, score2, "black");
+      
 
 
 
       //paddleP1
       paddle = rectangle(xPos, yPos, paddleXdim, paddleYdim, "black");
 
-      if(keyboard["w"])
+      if(keyboard["w"] || ["up"])
       {
         yPos = yPos + moveSpeed;
       }
-      if(keyboard["s"])
+      if(keyboard["s"] || ["down"])
       {
         yPos = yPos - moveSpeed;
       }
@@ -58,6 +57,7 @@
                 if(x > totalWidth - heightWidth)
               {
                 speedX = -1 * (random(speedX ) + minSpeed);
+                    score1 = score1+1;
 
               }
 
@@ -67,11 +67,15 @@
               {
 
   				speedY = -1 * (random(speedY) + minSpeed);
+                                        score1 = score1+1;
+
               }
 
              if(y < 0 + heightWidth)
               {
                 speedY = -1 * (random(speedY) - minSpeed);
+                                        score1 = score1+1;
+
               }
 
 
@@ -101,14 +105,19 @@
         text(centeredText+ 20, totalHeight -70, 70, "P1", "black");
 
       }
-              if(score2 < 0)
+              if(score2 < 0 < 10)
               {
 
                 var centeredText =(totalWidth/2 -400);
-                //text(centeredText, totalHeight -20, 70, "Wow you're bad", "black");
+                text(centeredText, totalHeight -20, 70, "Wow you're GOOD", "black");
                 //text((centeredText+totalWidth-80 ), totalHeight -70, 70, "P2", "black");
 
               }
+          if(score2 < 10)
+          {
+                  text(centeredText, totalHeight -20, 70, "Wow you're GOOD", "black");
+
+          }
 
 
 
