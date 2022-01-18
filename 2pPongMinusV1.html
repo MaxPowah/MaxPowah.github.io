@@ -1,0 +1,166 @@
+<script src="https://koda.nu/simple.js">
+    //just copy pasted from koda.nu
+
+//game name: pong minus
+  
+var moveSpeed = -1 * 20
+var x = 40;
+var y = 100;
+updatesPerSecond = 60;
+var screenEndX = 920;
+  var speedX = 3;
+  var speedY = 2;
+var heightWidth = 28;
+// Returns a random whole number from 1-10:
+var rnd = random(256);
+var rndG = random(256);
+var rndÖ = random(256);
+  
+var paddleXdim = 10;
+var paddleYdim = 130;
+var xPos = totalWidth - 40;
+var yPos = totalHeight/2;
+var score1 = 0;
+  var score2= 0;
+  
+  
+//paddle2
+  var xPos1 = 40
+  var yPos1 = totalHeight/2
+  var paddleXdim1 = 10;
+var paddleYdim1 = 130;
+  									var minSpeed = 8
+
+function update()
+  {
+    
+    
+    
+    
+    
+    
+        clearScreen();
+
+     text((totalWidth/2 - 180), 30, 20, "Score     |", "black");
+    //p1score   
+    	text((totalWidth/2 - 90), 30, 20, score1, "black");
+    //p2score
+        text((totalWidth/2), 30, 20, score2, "black");
+
+
+    
+    //paddleP1
+    paddle = rectangle(xPos, yPos, paddleXdim, paddleYdim, "black");
+    
+    if(keyboard["up"])
+    {
+      yPos = yPos + moveSpeed;
+    }
+    if(keyboard["down"])
+    {
+      yPos = yPos - moveSpeed;
+    }
+    	
+    //paddleP2
+    paddle2 = rectangle(xPos1, yPos1, paddleXdim1, paddleYdim1, "black");
+    
+    if(keyboard["w"])
+    {
+      yPos1 = yPos1 + moveSpeed;
+    }
+    if(keyboard["s"])
+    {
+      yPos1 = yPos1 - moveSpeed;
+    }
+    	
+    
+    //Ball
+		rectangle(x, y, heightWidth,heightWidth, mixColor(rnd, rndG, rndÖ));
+    	x = x+speedX;
+        y=y+speedY;
+			
+              if(x > totalWidth - heightWidth)
+            {
+              speedX = -1 * (random(speedX ) + minSpeed);
+
+            }
+
+           
+			
+          if(y > totalHeight - heightWidth)
+            {
+              
+				speedY = -1 * (random(speedY) + minSpeed);
+            }
+
+           if(y < 0 + heightWidth)
+            {
+              speedY = -1 * (random(speedY) - minSpeed);
+            }
+            
+    
+            if(x<xPos && y < yPos + paddleYdim && y> yPos)
+            {
+            	speedX = -1 * speedX;
+              	//score1 = score1+1;
+              	//score2=score2-1
+              
+            }
+    
+    
+    			//for resetting the ball
+    			if(x < 0)
+            {
+              score1 = score1-1;
+              score2 = score2+1;
+              
+            }
+    			if(x > totalWidth)
+            {
+              score1 = score1+1;
+              score2 = score2-1;
+              
+            }
+    		if (x<0 || x> totalWidth)
+            {
+            x = totalWidth/2
+              y = totalHeight/2
+              speedY = (random(minSpeed) + minSpeed);
+              speedX = minSpeed;
+            }
+    		//------------------------------
+    
+//--------------------------------------------------
+              
+            
+    
+    		//for paddleP2
+        if(x<xPos1 && y > yPos1 + paddleYdim && y< yPos1)
+        {
+          //speedX = -1 * speedX;
+          score1 = score1-1;
+          score2=score2+1
+
+        }
+    
+            if(score1 < 0)
+            {
+              var centeredText =(totalWidth/2 -400);
+              text(centeredText + 10, totalHeight -20, 70, "Wow you're bad", "black");
+              text(centeredText+ 20, totalHeight -70, 70, "P1", "black");
+
+            }
+            if(score2 < 0)
+            {
+              
+              var centeredText =(totalWidth/2 -400);
+              text(centeredText, totalHeight -20, 70, "Wow you're bad", "black");
+              text((centeredText+totalWidth-80 ), totalHeight -70, 70, "P2", "black");
+
+            }
+      
+              
+           
+  }
+
+</script>
