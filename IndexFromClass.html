@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!responsive design(determine by screen size if it is a phone or other device)>
-    <title>MaxHtml</title>
+    <title>MaxHtmlHome</title>
+    <link rel="stylesheet" href="CSS.css">
     <!tab name in the browser>
   </head>
 
@@ -16,15 +17,57 @@
 
 
   <!the page is within body>
-  <body style="background-color: rgb(185, 185, 185)">
+  <body>
+    
+        <header class="container" >
+      
+      <nav>
+        <div class="dropdown">
+          <button class="dropbtn">      <img src="./Images/Burger.png" alt="Three Lines"/>
+          </button>
+          <div class="dropdown-content">
+            
+            <!--images and button are inline elements therefore, they are on the same line by default
+              works because ./ indicates to look in this folder and that is where the image is-->
+              
+              <a href="https://maxpowah.github.io/">Home</a>
+              <a href="Download_Games.html">Game downloads</a>
+              <a href="IndexFromClass.html">Cool page</a>
+              <a href="./link.html">Create your own links</a>
+              <a href="UsefulLinks.html">Play games online</a>
+              <a href="articles.html">Articles</a>
+            </div>
+          </div>
+        </nav> 
+        <a class="home" href="index.html"><h2>MaxPowahNet</h2></a>
+
+    </header><!--this is html5, makes css easier-->
+
+
+    <header class="pageTheme2">
+
+      <br>
+      <br>
+      <br>
+      <br><br><br><br><br>
+    </header>
+
+        <h1 class="pagetitle2">Cool Page</h1>
+
+
+
     <h1>Cleanest Site in the Business</h1>
     <!h1 header actually important for screen readers accessibility>
     How about checking this out?
+    <nav>
     <a href="https://maxpowah.github.io/">MaxPowah.github.io</a>
+    </nav>
     <h3>Objectively Not Nearly as Good</h3>
+    <nav>
     <a href="https://treemaster134.github.io/TumbaNET/"
       >treemaster134.github.io</a
     >
+    </nav>
     <div>
         
     </div>
@@ -38,7 +81,7 @@
         src="./Images/gamer-mascot-logo-sticker-design-260nw-1431586820.webp"
         alt="Gaming Picture"
       />
-      <img src="./Images/gamer-zone-poster.jpg" alt="Stylish" style="position:absolute; right:80px; top:20px; width:500px;height:500px;">
+      <img src="./Images/gamer-zone-poster.jpg" alt="Stylish" style="position:absolute; right:0px; top:20px; width:600px;height:500px;">
       <!images and button are inline elements therefore, they are on the same line by default>
       <!works because ./ indicates to look in this folder and that is where the image is/>
     </a>
@@ -75,9 +118,31 @@
 
         <! can write li*3 for example>
       </ul>
-      <footer>
+    <footer>
+      <! how about putting a css black box around this to make it look slicker?>
+      <h4>List of this website's intended features</h4>
+      <ul class="features">
+        <!parent of the list>
+        <li>
+          <!child of the list, a single list item. A left dot known as a marker is automatically placed when making unordered lists>
+          Useful links
+        </li>
+        <li>Fun games</li>
+        <li>Bad blog?</li>
+        <li>Showcasing projects</li>
+
+        <! can write li*3 for example>
+      </ul>
+    <br>
+      <p> I would like some feedback, <a class="mail" href="mailto:bogieboogar@gmail.com?subject=About the website">please send an email to me with suggestions!</a>
+
+   
+   </p>
+   
+    <br>
         <h5>Project started in 2022</h5>
-      </footer>
-    </footer>
+        <br><br><br>
+
+      </footer>    </footer>
   </body>
 </html>

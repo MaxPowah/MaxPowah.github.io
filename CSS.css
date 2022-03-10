@@ -1,0 +1,336 @@
+/*use external style sheets
+
+This stylesheet is primarily for index.html
+*/
+.container /*nav bar*/ {
+  display: flex;
+  flex-direction: row;
+  background-color: cadetblue;
+  /*width: 17.7%;*/
+  color: rgb(61, 61, 61);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2mm;
+  min-width: 40em;
+  max-height: 12em;
+}
+.home {
+  display: flex;
+  background-color: rgb(69, 66, 90);
+  margin: 6;
+  color: rgb(255, 251, 250);
+  order: 0;
+  padding-top: 6mm;
+  padding-bottom: 10mm;
+}
+.f {
+  display: flex;
+  width: 20%;
+
+  font-size: 2.3em;
+  background-color: crimson;
+}
+.pageTheme1 {
+  background-color: blue;
+  position: static;
+  top: 0;
+  left: 0;
+  padding: 8mm;
+  padding-top: 0cm;
+}
+.pageTheme2 {
+  background-color: rgb(78, 165, 100);
+  position: static;
+  top: 0;
+  left: 0;
+  padding: 8mm;
+  padding-top: 0cm;
+}
+.pagetitle2 {
+  background-color: rgb(49, 230, 79);
+}
+.pageTheme3 {
+  background-color: rgb(182, 179, 36);
+  position: static;
+  top: 0;
+  left: 0;
+  padding: 8mm;
+  padding-top: 0cm;
+}
+.pagetitle3 {
+  background-color: rgb(230, 227, 49);
+}
+.pageTheme4 {
+  background-color: rgb(191, 47, 204);
+  position: static;
+  top: 0;
+  left: 0;
+  padding: 8mm;
+  padding-top: 0cm;
+}
+.pagetitle4 {
+  background-color: rgb(230, 49, 155);
+}
+.pageTheme5 {
+  background-color: rgb(161, 211, 218);
+  position: static;
+  top: 0;
+  left: 0;
+  padding: 8mm;
+  padding-top: 0cm;
+}
+.pagetitle5 {
+  background-color: rgba(49, 230, 212, 0.452);
+}
+.pageTheme6 {
+  background-color: rgb(165, 71, 71);
+  position: static;
+  top: 0;
+  left: 0;
+  padding: 8mm;
+  padding-top: 0cm;
+}
+.pagetitle6 {
+  background-color: rgba(208, 212, 196, 0.801);
+}
+
+.mainTextContent {
+  color: darkslategray;
+  font-weight: bold;
+}
+
+body {
+  background-color: rgb(255, 213, 213);
+  font-size: 62.5%;
+
+  /*what if user was allowed to change colors?*/
+  margin-left: 0;
+  padding: 0;
+}
+.pagetitleHome {
+  background-color: DodgerBlue;
+}
+
+main {
+  padding: 20px;
+}
+.menuu {
+  color: blanchedalmond;
+}
+.colorHeader {
+  color: MediumVioletRed;
+}
+
+.dropbtn {
+  order: 1;
+  background-color: cadetblue;
+  padding: 6px;
+  font-size: 4em;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: sticky;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #d4d4d4;
+}
+
+a {
+  font-weight: bold;
+  font-size: 3em;
+
+  /*I want this to be COMIC SAAAANS*/
+}
+
+main {
+  margin-top: 170px;
+}
+aside {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  scale: 50%;
+}
+
+.siteName {
+  margin: 6px;
+}
+h3 {
+  color: rgba(199, 21, 134, 0.87);
+}
+p {
+  font-size: 2em;
+}
+.siteName {
+  font-weight: bold;
+}
+.dropbtn {
+  position: relative;
+}
+h1 {
+  font-weight: bold;
+  font-size: 1.8cm;
+}
+
+.disclaimer {
+  top: 40mm;
+  background-color: cadetblue;
+  color: beige;
+}
+footer {
+  background-color: rgb(69, 66, 90);
+  color: rgb(255, 251, 250);
+  margin: 0cm;
+}
+
+.features {
+  font-stretch: extra-expanded;
+  font-size: 2em;
+}
+h4 {
+  font-size: 3em;
+}
+.mail {
+  font-size: 2em;
+  font-weight: heavier;
+}
+.contentBox {
+  background-color: rgb(255, 255, 255);
+  right: 0;
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+  row-gap: 1em;
+  margin-top: 0.5em;
+  column-gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center; /*centers elements with this attribute*/
+  justify-content: space-evenly;
+}
+.articleContent {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 1em;
+
+  background-color: rgb(195, 228, 47);
+}
+.clickArticle {
+  background-color: rgb(69, 66, 90);
+  margin: 6;
+  color: rgb(255, 251, 250);
+  order: 0;
+  font-size: 1em;
+  padding-top: 6mm;
+  padding-bottom: 10mm;
+}
+.childOfArticleContentAndParentOfArtImg {
+  display: flex;
+  justify-content: center;
+}
+.artImg {
+  display: flex;
+  justify-content: center;
+  width: 200%;
+  height: 100%;
+  max-width: 30em;
+  max-height: 30em;
+}
+.actualArticleTextSection {
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.actualArticleImageSectionWhichIsNotForTextABSOLUTELYnotWhateverYouDoDontPutTextHerePleaseIbegYOU {
+  display: flex;
+
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  max-width: -20em;
+}
+.video {
+  background-color: rgb(0, 0, 0);
+  padding: 3em;
+}
+
+.actualArticleImageSectionWhichIsNotForTextABSOLUTELYnotWhateverYouDoDontPutTextHerePleaseIbegYOU
+  a {
+  size: 300%;
+}
+
+@media (max-width: 1080px) {
+  body {
+    background-color: antiquewhite;
+  }
+  .contentBox {
+    display: flex;
+    flex-direction: column;
+    column-gap: 1.2em;
+    margin: 0.8em;
+    justify-content: center;
+    justify-content: space-evenly;
+  }
+  .artImg {
+    display: flex;
+    scale: 140%;
+    max-width: 45em;
+    max-height: 45em;
+    margin: 10em;
+  }
+}
+/*----------------------------------------------------*/
+#thumbs .thumb {
+  cursor: pointer;
+  background-color: red;
+  float: left;
+  margin: 0 20px 0 20px;
+  width: 100px;
+  text-align: center;
+  height: 100px;
+  position: relative;
+}
+#thumbs .more {
+  display: none;
+  position: absolute;
+  width: 380px;
+  top: 0;
+  left: 0;
+  background-color: blue;
+  color: #fff;
+}

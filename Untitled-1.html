@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS.css" />
+    <script src="./js-exempel/script.js" defer></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="thumbs">
+      <div class="thumb">
+        1
+        <div class="more">th1 1111111 ...</div>
+      </div>
+      <div class="thumb">
+        2
+        <div class="more">th2 2222222 ...</div>
+      </div>
+      <div class="thumb">
+        3
+        <div class="more">th3 3333333 ...</div>
+      </div>
+    </div>
+    <div style="clear: both"></div>
+
+    <div style="background-color: #ccc; height: 200px; margin-top: 50px"></div>
+    <script>
+      var z = 999;
+      $(function () {
+        $(".thumb").click(function () {
+          var $more = $(this).find(".more");
+          $more.css("z-index", z).show();
+          z++;
+
+          var h = $more.height();
+          $(this).height(h);
+        });
+
+        $(".more").click(function (event) {
+          event.stopPropagation();
+          $(this).hide();
+          $(".thumb").height(100);
+        });
+      });
+    </script>
+  </body>
+</html>

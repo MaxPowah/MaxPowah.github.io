@@ -1,3 +1,11 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PongMinus</title>
+  </head>
+</html>
 <script src="https://koda.nu/simple.js">
       //just copy pasted from koda.nu
 
@@ -29,21 +37,22 @@
     {
           clearScreen();
 
-       text((totalWidth/2 - 180), 30, 20, "Score:     );
+       text((totalWidth/2 - 180), 30, 20, "Score     |", "black");
       //p1score
       	text((totalWidth/2 - 90), 30, 20, score1, "black");
-      
+      //p2score
+          text((totalWidth/2), 30, 20, score2, "black");
 
 
 
       //paddleP1
       paddle = rectangle(xPos, yPos, paddleXdim, paddleYdim, "black");
 
-      if(keyboard["w"] || ["up"])
+      if(keyboard["w"])
       {
         yPos = yPos + moveSpeed;
       }
-      if(keyboard["s"] || ["down"])
+      if(keyboard["s"])
       {
         yPos = yPos - moveSpeed;
       }
@@ -57,7 +66,6 @@
                 if(x > totalWidth - heightWidth)
               {
                 speedX = -1 * (random(speedX ) + minSpeed);
-                    score1 = score1+1;
 
               }
 
@@ -67,15 +75,11 @@
               {
 
   				speedY = -1 * (random(speedY) + minSpeed);
-                                        score1 = score1+1;
-
               }
 
              if(y < 0 + heightWidth)
               {
                 speedY = -1 * (random(speedY) - minSpeed);
-                                        score1 = score1+1;
-
               }
 
 
@@ -105,19 +109,14 @@
         text(centeredText+ 20, totalHeight -70, 70, "P1", "black");
 
       }
-              if(score2 < 0 < 10)
+              if(score2 < 0)
               {
 
                 var centeredText =(totalWidth/2 -400);
-                text(centeredText, totalHeight -20, 70, "Wow you're GOOD", "black");
+                //text(centeredText, totalHeight -20, 70, "Wow you're bad", "black");
                 //text((centeredText+totalWidth-80 ), totalHeight -70, 70, "P2", "black");
 
               }
-          if(score2 < 10)
-          {
-                  text(centeredText, totalHeight -20, 70, "Wow you're GOOD", "black");
-
-          }
 
 
 

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js-exempel/script.js" defer></script>
+    <title>Links</title>
+    <link rel="stylesheet" href="./CSS.css" />
+  </head>
+  <body>
+    <header class="container">
+      <a class="home" href="index.html"><h2>MaxPowahNet</h2></a>
+
+      <nav>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <img src="./Images/Burger.png" alt="Three Lines" />
+          </button>
+          <div class="dropdown-content">
+            <!--images and button are inline elements therefore, they are on the same line by default
+            works because ./ indicates to look in this folder and that is where the image is-->
+
+            <a href="https://maxpowah.github.io/">Home</a>
+            <a href="Download_Games.html">Game downloads</a>
+            <a href="IndexFromClass.html">Cool page</a>
+            <a href="./link.html">Create your own links</a>
+            <a href="UsefulLinks.html">Play games online</a>
+            <a href="articles.html">Articles</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--this is html5, makes css easier-->
+    <header class="pageTheme5">
+      <br />
+      <br />
+      <br />
+      <br /><br /><br /><br /><br />
+    </header>
+
+    <h1 class="pagetitle5">Make Your Own Links</h1>
+    <div class="contentBox">
+      <h2 class="f">Note that these dissapear upon page reload</h2>
+      <form id="form">
+        <input type="text" id="input" name="input" />
+        <button type="submit">Enter</button>
+      </form>
+    </div>
+    <div id="container"></div>
+
+    <footer>
+      <! how about putting a css black box around this to make it look slicker?>
+      <h4>List of this website's intended features</h4>
+      <ul class="features">
+        <!parent of the list>
+        <li>
+          <!child of the list, a single list item. A left dot known as a marker is automatically placed when making unordered lists>
+          Useful links
+        </li>
+        <li>Fun games</li>
+        <li>Bad blog?</li>
+        <li>Showcasing projects</li>
+
+        <! can write li*3 for example>
+      </ul>
+      <br />
+      <p>
+        I would like some feedback,
+        <a
+          class="mail"
+          href="mailto:bogieboogar@gmail.com?subject=About the website"
+          >please send an email to me with suggestions!</a
+        >
+      </p>
+
+      <br />
+      <h5>Project started in 2022</h5>
+      <br /><br /><br />
+    </footer>
+  </body>
+</html>
