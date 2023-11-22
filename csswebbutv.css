@@ -132,6 +132,7 @@ h2 {
     font-weight: 400;
     font-size:16px;
     color: #009;
+    word-wrap:break-word;
 }
 section {
     width: 600px;
@@ -160,16 +161,15 @@ img {
 @media only screen and (max-width:951px) 
 { 
     #wrapper {
-        width: 470px;
+        width: 360px;
     }
     section {
-        width: 290px;
-
+        width: 50%;
     }
     #section8 {
-        width: 171px;
-        padding: 8px;
-        margin-left: 5px;    
+        width: 46%;
+        padding: 1%;
+        margin-left: 3%;    
     }
     body {
         font-size: 25px;
